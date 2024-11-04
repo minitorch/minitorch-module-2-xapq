@@ -319,7 +319,6 @@ def zeros(shape: UserShape, backend: TensorBackend = SimpleBackend) -> Tensor:
     )
 
 
-
 def rand(
     shape: UserShape,
     backend: TensorBackend = SimpleBackend,
