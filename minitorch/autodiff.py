@@ -69,7 +69,7 @@ def topological_sort(variable: Variable) -> Iterable[Variable]:
     def topsort(var: Variable):
         if not var.is_leaf():
             for parent in var.parents:
-                if parent.unique_id not in sorted_ids:
+                if not parent.is_constant() and parent.unique_id not in sorted_ids:
                     topsort(parent)
         sorted_ids.add(var.unique_id)
         ordered_vars.append(var)
