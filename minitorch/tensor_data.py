@@ -230,7 +230,6 @@ class TensorData:
             return tuple(map(int, np.array(tpl)[np.array(ordr)]))
 
         return TensorData(self._storage, tuple_permute(self.shape, order), tuple_permute(self.strides, order))
-        
 
     def to_string(self) -> str:
         s = ""
